@@ -102,3 +102,33 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 @media(prefers-reduced-motion:reduce){.secondary.try-demo,.secondary.try-demo:before{animation:none}.secondary.try-demo:before{display:none}}
 
 .store-guidance{display:block;margin:8px 0;font-size:12px;line-height:1.7;color:var(--ink);font-weight:600;overflow-wrap:anywhere}
+
+/* Welcome screen: an introduction before the first field intake. */
+.welcome-mode .app-shell{padding-bottom:0;background:#fffcf5}
+.welcome-mode .office-context,.welcome-mode .app-header,.welcome-mode .context,.welcome-mode .bottom-nav{display:none}
+.welcome-mode main{padding:0}
+.welcome{padding:25px 28px 22px;min-height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(ellipse at 85% 43%,#ffe9a7a6,transparent 48%),#fffcf5}
+.welcome-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;color:#6e6656}
+.welcome-demo{font-size:10px;border:1px solid #d9d1bd;padding:5px 9px;border-radius:20px;font-weight:500}
+.welcome-heading{margin-top:38px;position:relative;z-index:1}
+.welcome-kicker{font-size:12px;font-weight:600;color:#857451;letter-spacing:.2px;margin-bottom:9px}
+.welcome h1{font-size:58px;line-height:1.12;letter-spacing:-3.5px;font-weight:800;color:#302b22}
+.welcome-period{color:#e9a900}
+.welcome-message{font-size:25px;line-height:1.47;font-weight:750;letter-spacing:-1px;color:#332d22;margin-top:20px}
+.welcome-description{font-size:13px;line-height:1.8;color:#877b65;margin-top:12px;letter-spacing:-.3px}
+.welcome-art{height:232px;position:relative;margin:6px -10px 10px;flex:1;min-height:220px;max-height:285px}
+.welcome-orbit{position:absolute;width:228px;height:206px;background:#ffe5a0;border-radius:50%;left:50%;top:15px;transform:translateX(-50%)}
+.welcome-tag{position:absolute;width:133px;height:169px;background:#fff;left:50%;top:28px;transform:translateX(-50%) rotate(-12deg);border-radius:14px;box-shadow:8px 15px 30px #7a5c1220;border:1px solid #efe6d3;display:flex;align-items:center;flex-direction:column;padding:14px}
+.tag-hole{width:8px;height:8px;border-radius:50%;background:#f0dfba;margin-bottom:15px}
+.tag-brand{font-size:18px;font-weight:800;letter-spacing:-.8px;color:#3f382b}
+.tag-barcode{width:96px;height:48px;margin-top:12px;background:repeating-linear-gradient(90deg,#39352d 0 2px,transparent 2px 4px,#39352d 4px 5px,transparent 5px 8px,#39352d 8px 12px,transparent 12px 15px,#39352d 15px 17px,transparent 17px 19px)}
+.tag-caption{font-size:5px;letter-spacing:1.2px;margin-top:7px;color:#6f6758}
+.tag-check{position:absolute;right:-16px;top:30px;width:42px;height:42px;display:grid;place-items:center;background:#ffbc27;color:#40300a;border:4px solid #fffcf5;border-radius:50%}.tag-check svg{width:23px;stroke-width:3}
+.welcome-note{display:flex;align-items:center;gap:9px;position:absolute;background:#fffefb;padding:11px 14px;border:1px solid #f0e6cf;box-shadow:0 5px 18px #73591a0a;border-radius:13px;color:#4f4228;font-size:12px;font-weight:700;white-space:nowrap}.welcome-note>svg{width:21px;color:#b08014}.welcome-note small{display:block;font-size:9px;color:#94836a;font-weight:400;margin-top:4px}
+.note-before{top:35px;left:0;transform:rotate(-4deg)}.note-after{bottom:10px;right:0;transform:rotate(3deg)}
+.welcome-actions{position:relative;z-index:1}.welcome-start{background:#ffbd2d;color:#332809;font-size:15px;font-weight:750;min-height:55px;justify-content:space-between;padding:16px 20px;border-radius:15px}.welcome-start:hover{background:#ffb719}.welcome-start:active{background:#f2ab12}.welcome-start-caption{font-size:10px;color:#9b8b6f;text-align:center;margin:10px 0 19px}
+.welcome-shortcuts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #e9e0cf;padding-top:15px}.welcome-shortcuts button{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;padding:7px 0;font-weight:650}.welcome-shortcuts button+button{border-left:1px solid #e9e0cf}.welcome-shortcuts span{font-size:10px;color:#9a8d74;font-weight:400}.welcome-shortcuts svg{width:13px;height:13px;color:#9a8d74}
+.welcome-disclosure{text-align:center;font-size:9px;line-height:1.7;color:#a79b85;margin-top:21px}
+@media(max-width:360px){.welcome{padding:22px}.welcome-heading{margin-top:28px}.welcome h1{font-size:52px}.welcome-message{font-size:23px}.welcome-note{padding:10px;font-size:11px}.welcome-note small{font-size:8px}}
+@media(min-height:850px){.welcome-heading{margin-top:50px}.welcome-art{margin-top:20px;margin-bottom:20px}}
+@media(prefers-reduced-motion:no-preference){.welcome-heading,.welcome-art,.welcome-actions{animation:welcome-in .5s ease-out both}.welcome-art{animation-delay:.08s}.welcome-actions{animation-delay:.16s}@keyframes welcome-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
